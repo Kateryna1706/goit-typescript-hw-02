@@ -3,18 +3,35 @@
   і повертає boolean значення, що вказує, чи це день робочий чи вихідний.
 */
 
+// enum DayWeeks {
+//   Mon,
+//   Tue,
+//   Wed,
+//   Thu,
+//   Fri,
+//   Sat ,
+//   Sun,
+// }
+
+// function isWeekend(day: string): boolean {
+//   return day === 'Mon' || 'Tue' || 'Wed' || 'Thu' || 'Fri' ? true : false;
+// }
+
+
+// isWeekend(DayWeeks[DayWeeks.Mon])
+
 enum DayWeeks {
   Mon,
   Tue,
   Wed,
   Thu,
   Fri,
-  Sat ,
+  Sat,
   Sun,
 }
 
-function isWeekend(day: string): boolean {
-  return day === 'Mon' || 'Tue' || 'Wed' || 'Thu' || 'Fri' ? true : false;
+function isWeekend(day: DayWeeks): boolean {
+  return day === DayWeeks.Sat || day === DayWeeks.Sun
 }
 
 
